@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Menú de Películas{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('suspenso') }}">Suspenso</a></li>
+            <li><a href="{{ url_for('terror') }}">Terror</a></li>
+            <li><a href="{{ url_for('romance') }}">Romance</a></li>
+            <li><a href="{{ url_for('infantil') }}">Infantil</a></li>
+        </ul>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
